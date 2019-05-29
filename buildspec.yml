@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    commands:
+     - apt-get update
+  pre_build:
+    commands:
+     - echo "prebuils phase"
+     - mvn -f myapp/pom.xml clean install
+  post_build:
+    commands:
+     - ls 
